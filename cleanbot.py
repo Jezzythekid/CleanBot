@@ -22,14 +22,4 @@ async def on_ready():
     channel = client.get_channel(DISCORD_CHANNEL)
     await channel.send('dit is een test')
 
-
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
-
-
 client.run(DISCORD_TOKEN)
